@@ -1,0 +1,11 @@
+{
+    "jumpToAliasFile.alias": {
+        "react": "/Users/lipeng/Desktop/project/projectItem/reactSource/react/build/oss-experimental/react",
+        "react-debug-tools": "/Users/lipeng/Desktop/project/projectItem/reactSource/react/build/oss-experimental/react-debug-tools",
+        "react-devtools-feature-flags": "/Users/lipeng/Desktop/project/projectItem/reactSource/react/packages/react-devtools-shared/src/config/DevToolsFeatureFlags.default",
+        "react-dom": "/Users/lipeng/Desktop/project/projectItem/reactSource/react/build/oss-experimental/react-dom/unstable_testing",
+        "react-is": "/Users/lipeng/Desktop/project/projectItem/reactSource/react/build/oss-experimental/react-is",
+        "scheduler": "/Users/lipeng/Desktop/project/projectItem/reactSource/react/build/oss-experimental/scheduler",
+        "react-dom/client": "/Users/lipeng/Desktop/project/projectItem/reactSource/react/build/oss-experimental/react-dom/client"
+    }
+}
