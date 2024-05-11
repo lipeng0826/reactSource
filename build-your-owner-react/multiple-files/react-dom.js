@@ -84,7 +84,6 @@ export function commitWork(fiber) {
   else if (fiber.effectTag === "DELETION") {
     domParent.removeChild(fiber.dom)
   }
-  domParent.appendChild(fiber.dom)
   commitWork(fiber.child)
   commitWork(fiber.sibling)
 }

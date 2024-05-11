@@ -8,7 +8,7 @@ export function performUnitOfWork(fiber, deletions) {
   }
 
   const elements = fiber.props.children
-  reconcileChildren(fiber, elements, deletions)
+  reconcileChildren(fiber, elements, deletions) // 构建Fiber树，同时进行层级比较，找出需要更新的节点
 
   // 如果有子节点，返回子节点
   if (fiber.child) {
