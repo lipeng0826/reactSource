@@ -89,7 +89,11 @@
         就是将操作dom节点的代码，放到commit阶段中；
     7.在以上我们只实现了新增dom节点，但是没有实现更新和删除；所以我们需要在fiber架构中，实现更新和删除的功能；
     8.针对FunctionComponent和ClassComponent，我们需要在fiber架构中，实现他们的功能；
-
+        FunctionComponent和普通HostComponent的区别：
+            需要执行function()返回对应dom节点；
+    9.实现useState的功能
+        1.useState是react提供的一个hook函数，用来实现组件的状态管理；
+        2.setState调用后，会触发组件的重新渲染；
 实现参考沙盒地址：
     <https://codesandbox.io/s/didact-6-96533?file=/src/index.js>
 
