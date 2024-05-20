@@ -46,5 +46,5 @@ function Counter() {
 }
 const element3 = /*#__PURE__*/React.createElement(Counter, null);
 
-const container = document.getElementById("root")
-React.render(element3, container)
+const container = document.getElementById("root");
+React.render(element3, container);
