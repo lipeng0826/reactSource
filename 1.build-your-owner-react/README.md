@@ -93,12 +93,14 @@ function performUnitOfWork(nextUnitOfWork) {
 ```
 
     这个代码使用了requestIdleCallback，这个api会在浏览器空闲的时候执行我们的代码；在react最新版本中，使用了scheduler来实现这个功能；
+    nextUnitOfWork的参数是一个fiber对象，我们需要实现一个performUnitOfWork函数，来执行这个fiber对象；
+
     5.fiber
 
 <img src="./image.png" alt="Image" width="500" height="550">
 
     fiber是一种数据结构，用来描述组件树的一种更轻量的对象；同时可以让我们更好的控制组件的渲染过程；
-
+    就是包含了节点信息（虚拟dom节点），关联关系等信息的一个对象；
     对于fiber架构的数据，我们使用深度优先遍历的方式，来实现他的渲染；
         类似于上图中的执行顺序；
 
