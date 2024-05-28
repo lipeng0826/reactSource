@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>useStateTest</title>
+  </head>
+  <body>
+    <script>
+      // 李鹏自己思考版实现一个useState
+      // useState的写法： const [state, setState] = useState(initialState);
+      // 那么首先我需要写一个函数，返回值是一个数组，数组的第一个元素是state，第二个元素是setState，使用传入的initialState初始化state
+      function useState(initialState) {
+        _state = _state || initialState;
+        function setState(newState) {
+        // 第二步，我需要让setState函数能够修改state的值，那么我需要在setState函数中修改state的值。
+            _state = newState;
+            console.log(_state);
+        //  第三步，我需要在setState函数中生成一个Update对象，然后通知React进行更新
+            render();
+        }
+        return [_state, setState];
+      }
+      // 第四步，发现没有地方存储state的初始值，这个是不行的，那么我需要在render函数中存储state
+      let _state = undefined;    
+
+     const render = () => {
+        const [state, setState] = useState(0);
+
+        document.body.innerHTML = `
+          <h1>Count: ${state}</h1>
+          <button onclick="setState(state + 1)">+</button>
+          <button onclick="setState(state - 1)">-</button>
+        `;
+        setTimeout(() => {
+            state + 1 < 5 && setState(state + 1)
+        }, 1000);
+     }
+
+    //  测试代码
+
+    render();
+
+    </script>
+  </body>
+</html>

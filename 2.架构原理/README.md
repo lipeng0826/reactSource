@@ -95,7 +95,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
     6.重复以上步骤，直到遍历完所有节点； -->
     树的深度优先算法；
     往下遍历的时候，执行beginWork方法；主要是传入当前fiber节点，生成或者更新子fiber节点；建立fiber关联关系；
-    往上遍历的时候，执行completeWork方法；主要是生成dom节点；建立dom关联关系；将effectTag的fiber节点，收集到effect链表中；
+    往上遍历的时候，执行completeWork方法；主要是生成dom节点；建立dom关联关系；将effectTag的fiber节点，收集到effect链表中；这中间所说的dom操作逻辑都是打tag，放入effect链表中；
 
 #### fiber双缓存机制
 

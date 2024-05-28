@@ -1,0 +1,8 @@
+# useEffect&useLayoutEffect
+
+## useEffect
+
+1.useEffect和useState一样，都存储在fiber.memoizedState中；
+2.但是由于在render阶段没有副作用，所以useEffect是在commit阶段执行的；
+3.在commit阶段，我们会调用commitHookEffectList，这个函数的作用是遍历fiber的effect链表，然后执行effect的destroy函数；就是返回值，执行所有的销毁动作；
+4.然后我们会调用commitHookEffectList，这个函数的作用是遍历fiber的effect链表，然后执行effect的create函数；当然是在依赖项变化的时候；
