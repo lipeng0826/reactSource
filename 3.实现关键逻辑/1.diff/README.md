@@ -10,7 +10,7 @@
 
 ## 如果是单节点的 diff 算法
 
-![alt text](img/image.png)
+![alt text](../img/image.png)
 
     1.如果新旧节点的类型和key属性都相同，React会认为它们是同一个节点，并递归地比较它们的子节点。
     2.如果类型或key属性不同，React会认为它们是不同的节点，直接替换旧节点。

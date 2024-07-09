@@ -1,0 +1,6 @@
+# 不涉及主流程的一些小细节
+
+## React的Context的实现原理
+
+1.React的Context是一种全局的状态管理方案，可以在组件树中传递数据，而不必一层层手动传递。Context的实现原理是通过React.createContext()创建一个Context对象，然后通过Provider组件提供数据，Consumer组件消费数据。
+2.useContext是React提供的一个Hooks，可以在函数组件中使用Context，useContext接收一个Context对象作为参数，返回Context的当前值。算是对Context的一种封装。
