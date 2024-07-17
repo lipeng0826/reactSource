@@ -48,7 +48,7 @@
     4.shared.pending:触发更新的时候，会创建一个update对象，然后将这个update对象放到这个队列中；
         这里存储的是本次新的更新；
     5.effects：数组。保存update.callback !== null的Update。
-    6.最终会将shared.pending中的update和lastBaseUpdate连接起来组成一个数组；
+    6.最终会将shared.pending中的update和lastBaseUpdate连接起来组成一个链表；
         https://react.iamkasong.com/state/update.html#%E4%BE%8B%E5%AD%90
         这个文章的图就可以看出来。
     7.在合适的时机执行这个队列中的update；然后进入生成新的jsx，然后执行render的逻辑；
