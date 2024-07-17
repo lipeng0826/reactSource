@@ -33,7 +33,7 @@ ReactDOM.render(element, container);
     1.我们需要了解fiber架构；因为这是整个react的核心；
     2.fiber架构是一个链表结构，每个节点都是一个fiber对象；
         1.使用requestIdleCallback函数，将任务分成多个小任务；在空闲的时候执行；
-        2.fiber架构可以让中断和恢复组件的渲染不会丢失数据；
+        2.fiber架构可以中断和恢复组件的渲染而不会丢失数据；
     3.以上是fiber架构的基本概念；
     4.下面会深入介绍fiber架构的执行逻辑；
 
